@@ -33,6 +33,6 @@ app.post("/", function(req, res) {
     res.render("pages/index", {brief: brief});
 })
 
-app.listen(8000, function() {
+app.listen(port, function() {
     console.log("Brief server running...")
 })
