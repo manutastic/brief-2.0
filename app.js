@@ -1,6 +1,5 @@
 var express     = require("express"),
     app         = express(),
-    sass        = require("node-sass"),
     bodyParser  = require("body-parser"),
     getBrief    = require("./getbrief.js")
 
