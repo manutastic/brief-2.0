@@ -1,0 +1,15 @@
+{
+    "short_name": "/Brief",
+    "name": "/Brief: Creative Design Brief Generator",
+    "icons": [
+      {
+        "src":"icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/?utm_source=homescreen",
+    "background_color": "#00BFA5",
+    "Theme_color": "#00BFA5",
+    "display": "standalone"
+  }

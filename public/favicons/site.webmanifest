@@ -1,0 +1,19 @@
+{
+    "name": "/Brief",
+    "short_name": "/Brief",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png?v=oLBLb3by4g",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-256x256.png?v=oLBLb3by4g",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#00bfa5",
+    "background_color": "#00bfa5",
+    "display": "standalone"
+}

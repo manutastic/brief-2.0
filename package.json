@@ -1,0 +1,22 @@
+{
+  "name": "brief",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manuel Oppel del Rio",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.2"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}

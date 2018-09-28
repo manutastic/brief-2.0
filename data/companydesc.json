@@ -1,0 +1,191 @@
+{
+    "ta": [
+        "toddlers", "kids", "teens", "millenials", "college students", "adults", "seniors", "men", "women","parents", "people with a lower-class income","people with a middle-class income","people with a upper-class income","couples", "married couples", "single men","single women"
+    ],
+    "tech": {
+        "template": [
+            "We are a company that ",
+            " new ways to ",
+            " by combining ",
+            " with ",
+            ". Our main product is ",
+            " that you can use ",
+            " and implements ",
+            ". Our target audience are ",
+            ". We want to convey a sense of ",
+            ", while at the same time being ",
+            "."
+        ],
+        "blank1": ["develops","produces","inspires","researches"],
+        "blank2": ["communicate", "connect", "travel", "eat", "drink", "create", "write", "be organized", "cook", "protect your property", "take notes", "shop", "make lists", "find information", "learn new skills", "learn a language", "learn an instrument", "learn", "play games", "workout", "be healthy", "listen to music", "discover new music", "discover new movies", "discover new media", "share your photos", "share your videos", "watch movies", "watch TV", "learn code", "discover new recipes", "keep track of your contacts", "keep track of your appointments", "read books", "get discounts and coupons", "make payments", "read your mail", "discover places to eat", "discover fun things to do", "check the weather", "share your music", "keep up with the latest fashions"],
+        "blank3": ["innovative software", "big ideas", "a dedicated team", "years of experience in the industry", "open-source software", "crowd-sourced data"],
+        "blank4": ["beautiful design", "an easy to use interface", "a friendly face", "a lovable mascot", "ease of use"],
+        "blank5": ["an app","a device", "a website"],
+        "blank6": ["on the go", "at home", "wherever you are", "offline"],
+        "blank7": ["our groundbreaking technology", "new creative techniques", "years of scientific discovery", "our cloud technology"],
+        "blank8": "target-audience",
+        "blank9": ["comfort", "wonder", "innocence", "excitement", "glamour", "elegance", "importance", "fame", "power", "security", "mystery", "bravery", "delight", "eagerness", "faithfulness", "victory", "nostalgia"],
+        "blank10": ["realistic", "down-to-earth", "professional", "business-like", "gentle", "calm", "agreeable", "inexpensive", "kind", "lively", "old-fashioned", "modern", "approachable", "fresh"]
+    },
+    "food": {
+        "template": [
+            "We are a company that makes and distributes ",
+            " ",
+            ". Our main product is made with ",
+            " and ",
+            ". Our target audience is ",
+            ". We want to convey a sense of ",
+            ", while at the same time being ",
+            "."
+        ],
+        "blank1": ["vegan", "vegetarian", "low-calorie", "gluten-free", "healthy", "all-American", "delicious", "Indian", "Mexican", "Italian", "German", "African", "Russian", "Israeli", "Greek"],
+        "blank2": ["food", "drinks", "desserts", "pastries", "snacks", "soft drinks", "finger-food"],
+        "blank3": ["a secret recipe", "fresh ingredients", "the world's top chefs", "love", "attention to detail"],
+        "blank4": ["shipped directly to your home", "available in stores worldwide", "served in your favorite diners", "served in 5-star restaurants across the nation"],
+        "blank5": "target-audience",
+        "blank6": ["comfort", "wonder", "innocence", "excitement", "glamour", "elegance", "importance", "fame", "power", "security", "mystery", "bravery", "delight", "eagerness", "faithfulness", "victory", "nostalgia"],
+        "blank7": ["realistic", "down-to-earth", "professional", "business-like", "gentle", "calm", "agreeable", "inexpensive", "kind", "lively", "old-fashioned", "modern", "approachable", "fresh"]
+    },
+    "store": {
+        "template": [
+            "We are a ",
+            " that sells ",
+            ". Our main product stands out because of its ",
+            " and ",
+            ". Our target audience is ",
+            ". We want to convey a sense of ",
+            ", while at the same time being ",
+            "."
+        ],
+        "blank1": ["little corner-shop", "big chain of stores", "family store"],
+        "blank2": ["specialty goods", "party supplies", "board games", "video games", "perfume", "second-hand goods", "second-hand clothes", "the latest fashions", "kitchen accessiores", "cooking supplies", "electronics", "lighting fixtures", "beauty products", "sporting goods", "pet supplies", "furniture", "antique furniture", "antiques", "baked goods", "stuffed animals", "comic-books", "jewlery", "art supplies", "shoes", "office supplies", "books", "fabrics", "groceries", "ice-cream", "frozen yogurt", "glasses"],
+        "blank3": ["superior quality", "reputation", "price"],
+        "blank4": ["home-made feel", "authenticity", "convenience", "polish"],
+        "blank5": "target-audience",
+        "blank6": ["comfort", "wonder", "innocence", "excitement", "glamour", "elegance", "importance", "fame", "power", "security", "mystery", "bravery", "delight", "eagerness", "faithfulness", "victory", "nostalgia"],
+        "blank7": ["realistic", "down-to-earth", "professional", "business-like", "gentle", "calm", "agreeable", "inexpensive", "kind", "lively", "old-fashioned", "modern", "approachable", "fresh"]
+},
+    "ent": {
+        "template": [
+            "We are a company that makes and distributes ",
+            ". They stand out because they are ",
+            " and ",
+            ". Our target audience is ",
+            ". We want to convey a sense of ",
+            ", while at the same time being ",
+            "."
+        ],
+        "blank1": ["indie movies", "web shows", "comic books", "documentaries", "pop music", "country music", "rock music", "classical music", "techno music", "dance music", "music", "action movies", "comedy movies", "romantic movies", "movies", "indie games", "board games", "video games", "podcasts", "radio shows"],
+        "blank2": ["suprisingly witty", "cheap", "expensive", "atmospheric", "produced by big names in the industry", "truthful", "sarcastic", "high-quality", "home-made"],
+        "blank3": ["shipped directly to your home", "available in stores worldwide", "available in your local shops", "available in online stores"],
+        "blank4": "target-audience",
+        "blank5": ["comfort", "wonder", "innocence", "excitement", "glamour", "elegance", "importance", "fame", "power", "security", "mystery", "bravery", "delight", "eagerness", "faithfulness", "victory", "nostalgia"],
+        "blank6": ["realistic", "down-to-earth", "professional", "business-like", "gentle", "calm", "agreeable", "inexpensive", "kind", "lively", "old-fashioned", "modern", "approachable", "fresh"]
+    },
+    "fashion": {
+        "template": [
+            "We are a fashion company that sells ",
+            " ",
+            ". Our items are made with ",
+            " and are ",
+            ". Our target audience is ",
+            ". We want to convey a sense of ",
+            ", while at the same time being ",
+            "."
+        ],
+        "blank1": ["affordable", "stylish", "modern", "designer", "trendy", "timeless", "bespoke","fast-fashion","handmade", "sustainable", "plus-sized", "vintage"],
+        "blank2": ["menswear", "sportswear", "footwear", "bridal wear", "lingerie", "dresses", "everyday clothing", "business clothing", "suits", "outfits", "accesories", "baby clothes", "children's clothing", "socks", "hats", "jeans"],
+        "blank3": ["unique attention to detail", "high-quality materials", "unique designs", "expert craftmanship", "traditional methods", "the world's top designers", "quick turnaround", "sustainable materials", "environmentally friendly practices", "low-cost materials"],
+        "blank4": ["shipped directly to your home", "sold online only", "available in our retail stores", "sold in your favorite stores"],
+        "blank5": "target-audience",
+        "blank6": ["comfort", "wonder", "innocence", "excitement", "glamour", "elegance", "importance", "fame", "power", "security", "mystery", "bravery", "delight", "eagerness", "faithfulness", "victory", "nostalgia"],
+        "blank7": ["realistic", "down-to-earth", "professional", "business-like", "gentle", "calm", "agreeable", "inexpensive", "kind", "lively", "old-fashioned", "modern", "approachable", "fresh"]
+    },
+    "sports": {
+        "template": [
+            "We are a company that produces ",
+            " ",
+            " ",
+            ". We pride ourselves in our ",
+            ". Our target audience is ",
+            ". We want to convey a sense of ",
+            ", while at the same time being ",
+            "."
+        ],
+        "blank1": ["affordable","iconic","timeless","durable","the best","state-of-the-art"],
+        "blank2": ["baseball","basketball","football","rubgy","soccer","golf","hockey","tennis","bowling","cricket","horse racing","volleyball","surfing","snowboarding","rock climbing","mountaineering","cycling","martial arts","boxing","billiards","fly fishing","ultimate frisbee","gymnastics","curling","figure skating", "ping pong", "squash", "marathon running","skiing","canoeing","scuba diving","weightlifting","formula racing"],
+        "blank3": ["equipment","stadiums","fan merch","training videos","lessons for beginners"],
+        "blank4": ["knowledge of the sport","accuracy","high quality","worldwide reach","loyal fan base","proven track-record"],
+        "blank5": "target-audience",
+        "blank6": ["comfort", "wonder", "excitement", "elegance", "importance", "fame", "power", "security", "mystery", "bravery", "delight", "eagerness", "faithfulness", "victory", "nostalgia"],
+        "blank7": ["realistic", "down-to-earth", "professional", "business-like", "gentle", "calm", "agreeable", "inexpensive", "kind", "lively", "old-fashioned", "modern", "approachable", "fresh"]
+    },
+    "edu": {
+        "template": [
+            "We make ",
+            " for learning ",
+            ". We stand out because of our ",
+            ". Our target audience is ",
+            ". We want to convey a sense of ",
+            ", while at the same time being ",
+            "."
+        ],
+        "blank1": ["educational videos","textbooks","educational youtube series'","online courses","college courses","highschool curriculums", "workshops", "tutoring services"],
+        "blank2": ["math","algebra","geometry","science","biology","physics","chemistry","geography","history","economics","art","music","Spanish","French","German","Italian","Japanese","Russian","Korean","Portuguese","Mandarin","Turkish","Dutch","Swedish","Irish","Greek","Hebrew","Polish","Vietnamese","Danish","Romanian","Swahili","Hungarian","Welsh","Ukranian","Czech","Hindi","languages","graphic design","web design","web development","illustration","photo editing","photography","music production","writing","fiction writing","poetry writing","drawing","mobile app development","programming languages","game development","software development","finance","3D modeling","animation","game design","fashion design","interior design","architecture","marketing","advertising","cinematography","filmmaking","singing","piano","guitar","the violin","the drums","the saxophone","the flute","the cello","the clarinet","the trumpet","the harp","bass"],
+        "blank3": ["price","excellent instructors","our worldclass experts","availability","ease of learning","new technologies","customer service","reputation"],
+        "blank4": "target-audience",
+        "blank5": ["comfort", "wonder", "excitement", "elegance", "importance", "fame", "power", "security", "mystery", "bravery", "delight", "eagerness", "faithfulness", "victory", "nostalgia"],
+        "blank6": ["realistic", "down-to-earth", "professional", "business-like", "gentle", "calm", "agreeable", "inexpensive", "kind", "lively", "old-fashioned", "modern", "approachable", "fresh"]
+    },
+    "transp": {
+        "template": [
+            "We are a company that makes ",
+            " ",
+            " with an emphasis on ",
+            ". Our target audience is ",
+            ". We want to convey a sense of ",
+            ", while at the same time being ",
+            "."
+        ],
+        "blank1": ["electric","premium","affordable","high-quality","high-performance","long-lasting","luxury","custom"],
+        "blank2": ["all-terrain vehicles","vehicles","busses","golf carts","jet skis","scooters","minivans","yachts","monorails","race cars","cars","tractors","bycicle","motorcycle","trains","trucks","vans","blimps","hot-air baloons","carrier aircrafts","helicopters","jetpacks","boats","submarines","surfboards"],
+        "blank3": ["price","sustainabilty","safety","durability","status","performace","automation","design","form over function","customizabilty"],
+        "blank4": "target-audience",
+        "blank5": ["comfort", "wonder", "excitement", "elegance", "importance", "fame", "power", "security", "mystery", "bravery", "delight", "eagerness", "faithfulness", "victory", "nostalgia"],
+        "blank6": ["realistic", "down-to-earth", "professional", "business-like", "gentle", "calm", "agreeable", "inexpensive", "kind", "lively", "old-fashioned", "modern", "approachable", "fresh"]
+    },
+    "realestate": {
+        "template": [
+            "We offer a selection of ",
+            " ",
+            " with ",
+            ". Our target audience is ",
+            ". We want to convey a sense of ",
+            ", while at the same time being ",
+            "."
+        ],
+        "blank1": ["new","used","renovated","affordable","luxury","pre-construction"],
+        "blank2": ["homes","apartments","mansions","houses","condos","retail locations","offices"],
+        "blank3": ["great prices","amazing locations","convenient locations","solar power","home automation"],
+        "blank4": "target-audience",
+        "blank5": ["comfort", "wonder", "excitement", "elegance", "importance", "fame", "power", "security", "mystery", "bravery", "delight", "eagerness", "faithfulness", "victory", "nostalgia"],
+        "blank6": ["realistic", "down-to-earth", "professional", "business-like", "gentle", "calm", "agreeable", "inexpensive", "kind", "lively", "old-fashioned", "modern", "approachable", "fresh"]
+    },
+    "travel": {
+        "template": [
+            "We offer a variety of ",
+            " destinations. We are able to ",
+            " because of our ",
+            ". Our target audience is ",
+            ". We want to convey a sense of ",
+            ", while at the same time being ",
+            "."
+        ],
+        "blank1": ["exotic","affordable","luxury","authentic","local","tropical"],
+        "blank2": ["offer the lowest prices","offer exclusive hotel deals","making booking easy","provide authentic local guides","offer an authentic experience","include a variety of ammeneties"],
+        "blank3": ["easy-to-use app","arrengements with local companies","staff of travel experts","staff in every location"],
+        "blank4": "target-audience",
+        "blank5": ["comfort", "wonder", "excitement", "elegance", "importance", "fame", "power", "security", "mystery", "bravery", "delight", "eagerness", "faithfulness", "victory", "nostalgia"],
+        "blank6": ["realistic", "down-to-earth", "professional", "business-like", "gentle", "calm", "agreeable", "inexpensive", "kind", "lively", "old-fashioned", "modern", "approachable", "fresh"]
+    }
+}
