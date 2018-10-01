@@ -17,6 +17,9 @@ app.get("/about", function(req, res) {
     res.render("pages/about")
 })
 
+app.get("/v1", function(req, res){
+    res.render("pages/v1")
+})
 
 app.post("/", function(req, res) {
     var brief = new Object();
