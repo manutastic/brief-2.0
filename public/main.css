@@ -290,13 +290,17 @@ section label > input + i {
     margin-left: auto;
     margin-right: auto;
     -webkit-transition: bottom .1s ease,
+                background .1s ease,
                 -webkit-box-shadow .1s ease;
     transition: bottom .1s ease,
+                background .1s ease,
                 -webkit-box-shadow .1s ease;
-    transition: bottom .1s ease,
-                box-shadow .1s ease;
     transition: bottom .1s ease,
                 box-shadow .1s ease,
+                background .1s ease;
+    transition: bottom .1s ease,
+                box-shadow .1s ease,
+                background .1s ease,
                 -webkit-box-shadow .1s ease;
     -webkit-box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
             box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);    

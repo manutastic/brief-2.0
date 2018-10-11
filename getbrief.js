@@ -6,7 +6,7 @@ var jobDescBank = require("./data/jobdesc.json");
 
 
 var getName = function(industry) {
-    if (industry == 'random') {
+    if (industry == 'randomindustry') {
         industry = getRandomKey(companyDescBank);
     } 
     var nouns = nounArray;
@@ -28,7 +28,7 @@ var getName = function(industry) {
 }
 
 var getDesc = function(industry) {
-    if (industry == 'random') {
+    if (industry == 'randomindustry') {
         industry = getRandomKey(companyDescBank);
     } 
     var bank = companyDescBank[industry];
@@ -47,7 +47,7 @@ var getDesc = function(industry) {
 }
 
 var getJob = function(job) {
-    if (job == 'random') {
+    if (job == 'randomjob') {
         job = getRandomKey(jobDescBank);
     } 
     var bank = jobDescBank[job];

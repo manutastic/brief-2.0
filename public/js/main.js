@@ -7,7 +7,7 @@
 function toggleClass(element, toggleClass){
     var currentClass = element.className;
     var newClass;
-    if(currentClass.split(" ").indexOf(toggleClass) > -1){ //has class
+    if(currentClass.split(" ").indexOf(toggleClass) > -1){
        newClass = currentClass.replace(new RegExp('\\b'+toggleClass+'\\b','g'),"")
     }else{
        newClass = currentClass + " " + toggleClass;
