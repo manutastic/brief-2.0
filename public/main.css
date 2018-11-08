@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'sofia_probold';
+    src: url('fonts/sofia_pro_bold-webfont.woff2') format('woff2'),
+         url('fonts/sofia_pro_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sofia_prolight';
+    src: url('fonts/sofia_pro_light-webfont.woff2') format('woff2'),
+         url('fonts/sofia_pro_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 *{
     font-family: 'Nunito Sans', Roboto, 'Open Sans', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -37,16 +55,23 @@ header {
     color: #FFFFFF;
 }
 header h1 a{
-    font-weight: 800;
+    font-family: 'sofia_prolight','Nunito Sans', Roboto, 'Open Sans', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
     color: #FFFFFF;
     text-decoration: none;
     font-size: 3em;
 }
 
+header h1 a span {
+    font-family: 'sofia_probold','Nunito Sans', Roboto, 'Open Sans', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
 header p {
+    font-family: 'sofia_prolight','Nunito Sans', Roboto, 'Open Sans', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #FFFFFF;
     font-size: 17px;
-    margin-top: -30px;
+    margin-top: -10px;
 }
 
 header h2 {
