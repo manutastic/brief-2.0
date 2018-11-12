@@ -1,0 +1,78 @@
+{
+    "logo": {
+        "template": [
+            "You must create a logo using the information given in this brief. They would prefer ",
+            " that uses the color ",
+            ". The logo will be ",
+            ". Take into account the company's values and preferences, and make sure it will work for the planned use-cases."
+        ],
+        "blank1": ["a lettermark","a wordmark","a pictorial mark","an abstract logo mark","a mascot logo","an emblem logo","a combination mark"],
+        "blank2": ["red", "orange", "yellow", "green", "blue", "purple", "black", "grey", "white"],
+        "blank3": ["used on the company website","embroidered on uniforms","printed on the side of vehicles"]
+    },
+    "brandid": "You must create the total branding package. This includes creating an appropriate brand name, a consistent visual system, and of course a great logo.",
+    "illus": {
+        "template": [
+            "You must create ",
+            " illustrations ",
+            " that ",
+            ". They would prefer a ",
+            " art style, and would like you to use the brand color, which is ",
+            ". Take into account the client's preferences and values."
+        ],
+        "blank1": ["two","three","four", "five"],
+        "blank2": ["for a new ad campaign","for the company website","for the product packaging"],
+        "blank3": ["show off their new product","show the company's team","convey the company's values"],
+        "blank4": ["cartoonish","modern","more abstract","traditional"],
+        "blank5": ["red", "orange", "yellow", "green", "blue", "purple", "black", "grey", "white"]
+    },
+    "packaging": {
+        "template": [
+            "You must create packaging for the company's main product. They want you to ",
+            ", and make sure you ",
+            ". They would prefer a ",
+            " design, and would like you to use the brand color, which is ",
+            ". Take into account the client's preferences and values."
+        ],
+        "blank1":["use biodegradable materials","give the package a distinct shape","match the look of their competitors","use interesting materials","show the product prominently","make the contents visile"],
+        "blank2":["include a description of the product","don't use any images","don't use any text","make the title stand out"],
+        "blank3": ["minimal","extravagant","luxurious","trendy","hand-drawn","colorful","monochromatic","modern","old-fashioned","vintage-style"],
+        "blank4": ["red", "orange", "yellow", "green", "blue", "purple", "black", "grey", "white"]
+    },
+    "billboard": {
+        "template": [
+            "You must create a billboard advertisement for the company. The ad should ",
+            " and ",
+            ". They would prefer a ",
+            " design, and would like you to use the brand color, which is ",
+            ". Take into account the client's preferences and values."
+        ],
+        "blank1":["use no images","use no words","use an eye-grabbing image","have a catchy tagline","feature a celebrity","show people using the product"],
+        "blank2":["the billboard should have a unique shape","be thought provoking","be shocking","convey a clear message","explain the main product","match the look of their competitors","stand out from their competitors"],
+        "blank3": ["minimal","extravagant","luxurious","trendy","hand-drawn","colorful","monochromatic","modern","old-fashioned","vintage-style"],
+        "blank4": ["red", "orange", "yellow", "green", "blue", "purple", "black", "grey", "white"]
+    },
+    "website": {
+        "template": [
+            "You must create a website that will mainly ",
+            ". The goal is to ",
+            ". Besides the landing page, the website will need a ",
+            "",
+            "",
+            ". The landing page should have a ",
+            " section. There should be a call to action to get users to ",
+            ". They would prefer a ",
+            " design, and would like you to use the brand color, which is ",
+            ". Take into account the client's preferences and values."
+        ],
+        "blank1":["sell the company's products","provide information","show a list of the company's products","spread brand awareness","make it easy to contact the company","provide customer support for the company"],
+        "blank2":["increase sales","increase search rankings","provide a great user experience","emphasize the brand's values","make a landing page that maximizes conversions","make the website easy to navigate","make it clear what the company does"],
+        "blank3":["about page","contact page","information page"],
+        "blank4":[", shop page",", product pages"],
+        "blank5":[" and a terms of service page", " and a blog"," and a privacy policy page"],
+        "blank6":["Contact Us","About the Team","Our Values"],
+        "blank7":["subscribe to the newsletter","follow the company's social media","call for more information","order a free sample","view the catalogue","make a purchase"],
+        "blank8": ["minimal","luxurious","trendy","colorful","monochromatic","modern","old-fashioned"],
+        "blank9": ["red", "orange", "yellow", "green", "blue", "purple", "black", "grey", "white"]
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Creative Design Brief Generator</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/v1/styles.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Quicksand:300' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div id="container">
+			<header>
+				<h1>/Brief</h1>
+				<h2>A random generator for design briefs.</h2>
+			</header>
+			<div id="options">
+				<div class="bar" id="bar-1">
+					<ul>
+						<li class="box selected" data-box-id="box-1">
+							<h4>Brand</h4>
+							<input type="radio" name="work-type" value="brand" id="brand"/>
+						</li>
+						<li class="box" data-box-id="box-2">
+							<h4>Logo</h4>
+							<input type="radio" name="work-type" value="logo" id="logo"/>
+						</li>
+						<li class="box" data-box-id="box-3">
+							<h4>Illustration</h4>
+							<input type="radio" name="work-type" value="illust" id="illust"/>
+						</li>
+						<li class="box" data-box-id="box-4">
+							<h4>Packaging</h4>
+							<input type="radio" name="work-type" value="package" id="package"/>
+						</li>
+					</ul>
+				</div>
+				<div class="bar" id="bar-2">
+					<ul>
+						<li class="box selected" data-box-id="box-5">
+							<h4>Tech</h4>
+							<input type="radio" name="industry" value="tech"/>
+						</li>
+						<li class="box" data-box-id="box-6">
+							<h4>Food</h4>
+							<input type="radio" name="industry" value="food"/>
+						</li>
+						<li class="box" data-box-id="box-7">
+							<h4>Store</h4>
+							<input type="radio" name="industry" value="bm"/>
+						</li>
+						<li class="box" data-box-id="box-8">
+							<h4>Entertainment</h4>
+							<input type="radio" name="industry" value="ent"/>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="content">
+				<!-- Generated Content Goes Here -->
+				<span id="brief">
+					<h5 id="comp-name"></h5>
+					<h5 id="comp-desc"></h5>
+					<h5 id="job-desc"></h5>
+					<h5 id="color-style"></h5>
+					<h5 id="color-pref"></h5>
+					<h5 id="logo-style"></h5>
+					<h5 id="logo-usage"></h5>
+					<h5 id="reqs"></h5>
+					<h5 id="deadline"></h5>
+				</span>
+				<div id="gen-button">
+					<span>Generate</span>
+				</div>
+			</div>
+			<footer>
+				<h6>A project by Manuel Oppel del Rio, from <a href="http://www.manuodelrio.com">www.manuodelrio.com</a><h6>
+			</footer>
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/v1/script.js"></script>
+</html>
