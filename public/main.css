@@ -227,13 +227,19 @@ section label > input + i {
     right: 0;
 }
 
+
 /* For small devices */
+@media (max-width: 460px) {
+    header h1 a {
+        font-size: 2.5em;   
+    }
+}
 @media (max-width: 400px) {
     .container {
         margin: 70px auto 50px;
     }
     header h1 a {
-        font-size: 2.5em;   
+        font-size: 2em;   
     }
     section {
         grid-template-columns: 1fr 1fr;
