@@ -280,7 +280,7 @@ section label > input + i {
 
 .brief {
     padding:30px;
-    max-height: 600px;
+    max-height: 650px;
     opacity: 1;
     -webkit-transition: max-height 1s cubic-bezier(0.175, 0.885, 0.32, 1.275),
                 opacity 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) .2s;
