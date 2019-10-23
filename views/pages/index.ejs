@@ -171,6 +171,7 @@
                     </div>
                     <input type="submit" value="Generate" onclick="saveOptions()"></input>
                 </form>
+                <button id="download-btn-md" onclick="saveAsMD(<%= JSON.stringify(typeof brief != 'undefined' ? brief : {}) %>)">Download as Markdown</button>
             </div>
         </div>
 
