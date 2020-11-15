@@ -119,6 +119,7 @@ section.about {
     width: 50%;
     -webkit-transition: all .1s ease;
     transition: all .1s ease;
+    transition-property: border, top, left;
 }
 .card section label:hover i {
     border: 4px solid #00a892;
@@ -293,12 +294,23 @@ section label > input + i {
     pointer-events: none;
 }
 
+.brief .content {
+    transition: opacity .3s ease;
+    min-height: 305px;
+}
+
 .brief.loading .content {
-    display: none;
+    opacity: 0;
+}
+
+.skeleton {
+    transition: opacity .3s ease;
+    position: absolute;
+    width: calc(100% - 60px);
 }
 
 .brief:not(.loading) .skeleton {
-    display: none;
+    opacity: 0;
 }
 
 .brief h3:first-of-type {

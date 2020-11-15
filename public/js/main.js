@@ -60,12 +60,17 @@ function getOptions() {
 	}
 }
 
-function toggleLoadingAnim() {
+function setLoading(loading) {
     const genButton = document.getElementById("gen-btn");
     const briefSection = document.querySelector('.brief');
-    genButton.value = genButton.value === "Generate" ? "Generating..." : "Generate";
-    toggleClass(genButton, "loading");
-    toggleClass(briefSection, "loading");
+    genButton.value = loading ? "Generating..." : "Generate";
+    if (loading) {
+        genButton.classList.add("loading");
+        briefSection.classList.add("loading");
+    } else {
+        genButton.classList.remove("loading");
+        briefSection.classList.remove("loading");
+    }
 }
 
 function renderBrief(brief) {
@@ -87,7 +92,7 @@ function renderBrief(brief) {
 }
 
 function generateBrief() {
-    toggleLoadingAnim();
+    setLoading(true);
     const selectedOptions = getOptions();
     localStorage["briefoptions"] = JSON.stringify(selectedOptions);
     fetch('/brief', {
@@ -99,7 +104,7 @@ function generateBrief() {
         body: JSON.stringify({'job': selectedOptions[0], 'industry': selectedOptions[1]})
     }).then(response => response.json())
     .then(data => {
-        toggleLoadingAnim();
+        setLoading(false);
         renderBrief(data);
     });
 }
