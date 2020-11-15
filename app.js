@@ -8,9 +8,11 @@ var port = process.env.PORT || 8000;
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.get("/", function(req, res) {
-    res.render("pages/index")
+    const options = getBrief.getOptions();
+    res.render("pages/index", {options})
 })
 
 app.get("/about", function(req, res) {
@@ -21,19 +23,19 @@ app.get("/v1", function(req, res){
     res.render("pages/v1")
 })
 
-app.post("/", function(req, res) {
+app.post("/brief", function(req, res) {
     var brief = new Object();
     var job = req.body.job;
     var industry = req.body.industry;
-    if (job == "brandid"){
-        brief.name = "";
-    } else {
+
+    if (job != "brandid"){
         brief.name = getBrief.companyName(industry);
     }
     brief.desc = getBrief.companyDesc(industry);
     brief.job = getBrief.jobDesc(job, industry);
     brief.deadline = getBrief.deadline();
-    res.render("pages/index", {brief: brief});
+
+    res.json(brief);
 })
 
 app.listen(port, function() {

@@ -2,56 +2,24 @@
 
         <div class="card">
             <div class="options">
-                <form action="/" method="POST">
+                <form>
                     <div class="job option" id="job-options">
                         <div class="option-bar">
                             <p>Type of Work:</p>
                             <p class="value"></p>
                             <i class="fas fa-chevron-down"></i>
                         </div>
-                        <section class="">
-                            <label>
-                                <input type="radio" name="job" value="logo" checked="checked">
-                                <i class="fas fa-shapes"></i>
-                                <p>
-                                    Logo
-                                </p>
-                            </label>
-                            <label>
-                                <input type="radio" name="job" value="brandid">
-                                <i class="fas fa-user-circle"></i>
-                                <p>
-                                    Brand Identity
-                                </p>
-                            </label>
-                            <label>
-                                <input type="radio" name="job" value="illus">
-                                <i class="fas fa-paint-brush"></i>
-                                <p>
-                                    Illustration
-                                </p>
-                            </label>
-                            <label>
-                                <input type="radio" name="job" value="packaging">
-                                <i class="fas fa-box"></i>
-                                <p>
-                                    Packaging
-                                </p>
-                            </label>
-                            <label>
-                                <input type="radio" name="job" value="billboard">
-                                <i class="fas fa-audio-description"></i>
-                                <p>
-                                    Billboard
-                                </p>
-                            </label>
-                            <label>
-                                <input type="radio" name="job" value="website">
-                                <i class="fas fa-desktop"></i>
-                                <p>
-                                    Website
-                                </p>
-                            </label>
+                        <section class="collapsed">
+                            <% Object.keys(options.jobs).forEach(function (key) { %>
+                                <label>
+                                    <input type="radio" name="job" value="<%=key%>">
+                                    <i class="<%=options.jobs[key].icon%>"></i>
+                                    <p>
+                                        <%=options.jobs[key].name%>
+                                    </p>
+                                </label>
+                              <% }); %>
+                            
                             <label>
                                 <input type="radio" name="job" value="randomjob">
                                 <i class="fas fa-dice"></i>
@@ -67,77 +35,16 @@
                             <p class="value"></p>
                             <i class="fas fa-chevron-down"></i>
                         </div>
-                        <section class="">
-                            <label>
-                                <input type="radio" name="industry" value="tech" checked="checked">
-                                <i class="fas fa-code"></i>
-                                <p>
-                                    Technology
-                                </p>
-                            </label>
-                            <label>
-                                <input type="radio" name="industry" value="food">
-                                <i class="fas fa-apple-alt"></i>
-                                <p>
-                                    Food
-                                </p>
-                            </label>
-                            <label>
-                                <input type="radio" name="industry" value="store">
-                                <i class="fas fa-store-alt"></i>
-                                <p>
-                                    Retail Store
-                                </p>
-                            </label>
-                            <label>
-                                <input type="radio" name="industry" value="ent">
-                                <i class="fas fa-play-circle"></i>
-                                <p>
-                                    Entertainment
-                                </p>
-                            </label>
-                            <label>
-                                <input type="radio" name="industry" value="fashion">
-                                <i class="fas fa-tshirt"></i>
-                                <p>
-                                    Fashion
-                                </p>
-                            </label>
-                            <label>
-                                <input type="radio" name="industry" value="sports">
-                                <i class="fas fa-futbol"></i>
-                                <p>
-                                    Sports
-                                </p>
-                            </label>
-                            <label>
-                                <input type="radio" name="industry" value="edu">
-                                <i class="fas fa-graduation-cap"></i>
-                                <p>
-                                    Education
-                                </p>
-                            </label>
-                            <label>
-                                <input type="radio" name="industry" value="transp">
-                                <i class="fas fa-car"></i>
-                                <p>
-                                    Transportation
-                                </p>
-                            </label>
-                            <label>
-                                <input type="radio" name="industry" value="realestate">
-                                <i class="fas fa-home"></i>
-                                <p>
-                                    Real Estate
-                                </p>
-                            </label>
-                            <label>
-                                <input type="radio" name="industry" value="travel">
-                                <i class="fas fa-plane"></i>
-                                <p>
-                                    Travel
-                                </p>
-                            </label>
+                        <section class="collapsed">
+                            <% Object.keys(options.industries).forEach(function (key) { %>
+                                <label>
+                                    <input type="radio" name="industry" value="<%=key%>">
+                                    <i class="<%=options.industries[key].icon%>"></i>
+                                    <p>
+                                        <%=options.industries[key].name%>
+                                    </p>
+                                </label>
+                              <% }); %>
                             <label>
                                 <input type="radio" name="industry" value="randomindustry">
                                 <i class="fas fa-dice"></i>
@@ -148,28 +55,34 @@
                         </section>
                     </div>
                     <div class="brief">
-                        <% if (typeof brief!='undefined') { %>
-                            <% if (brief.name != "") { %>
+                        <div class="skeleton">
+                            <div class="skeleton-header"></div>
+                            <div class="skeleton-p "></div>
+                            <div class="skeleton-header"></div>
+                            <div class="skeleton-p "></div>
+                            <div class="skeleton-p "></div>
+                            <div class="skeleton-p "></div>
+                            <div class="skeleton-header"></div>
+                            <div class="skeleton-p "></div>
+                            <div class="skeleton-p "></div>
+                            <div class="skeleton-p "></div>
+                            <div class="skeleton-p "></div>
+                            <div class="skeleton-header"></div>
+                            </div>
+                        <div class="content">
+                            <span id="name-section">
                                 <h3>Company Name: </h3>
-                                <p>
-                                    <%= brief.name %>
-                                </p>
-                                <% } %>
-                                    <h3>Company Description: </h3>
-                                    <p>
-                                        <%= brief.desc %>
-                                    </p>
-                                    <h3>Job Description: </h3>
-                                    <p>
-                                        <%= brief.job %>
-                                    </p>
-                                    <h3>Deadline: </h3>
-                                    <p>
-                                        <%= brief.deadline %>
-                                    </p>
-                                    <% } %>
+                                <p id="brief-name"></p>
+                            </span>
+                            <h3>Company Description: </h3>
+                            <p id="brief-desc"></p>
+                            <h3>Job Description: </h3>
+                            <p id="brief-job"></p>
+                            <h3>Deadline: </h3>
+                            <p id="brief-deadline"></p>
+                        </div>
                     </div>
-                    <input type="submit" value="Generate" onclick="saveOptions()"></input>
+                    <input type="button" class="primary-btn" id="gen-btn" value="Generate" onclick="generateBrief()"></input>
                 </form>
             </div>
         </div>

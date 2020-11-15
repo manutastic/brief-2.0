@@ -293,6 +293,13 @@ section label > input + i {
     pointer-events: none;
 }
 
+.brief.loading .content {
+    display: none;
+}
+
+.brief:not(.loading) .skeleton {
+    display: none;
+}
 
 .brief h3:first-of-type {
     margin-top: 0;
@@ -305,11 +312,17 @@ section label > input + i {
     margin: 0;
 }
 
-.card input[type="submit"] {
+.brief #name-section {
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.card .primary-btn {
     background: #FFCC80;
     cursor: pointer;
     font-weight: 700;
     font-size: 17px;
+    text-align: center;
     border: none;
     padding: 15px;
     position: absolute;
@@ -337,15 +350,15 @@ section label > input + i {
             box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);    
 }
 
-.card input[type="submit"]:hover {
+.card .primary-btn:hover {
     background: #ffe4bc;
     bottom: -24px;
     -webkit-box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
             box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
 }
 
-.card input[type="submit"]:focus, 
-.card input[type="submit"]:active {
+.card .primary-btn:focus, 
+.card .primary-btn:active {
     outline: none;
     border: 2px solid #ffefd8;
     -webkit-transform: translateY(2px);
@@ -358,4 +371,60 @@ footer {
 }
 footer a {
     color: hsla(0, 0%, 100%, 90%)
+}
+
+.brief #name-section.hide {
+    display: none;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 100% 50%;
+        transform: translateY(0);
+        box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08); 
+    }
+    50% {
+        transform: translateY(-3px);
+        box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+    }
+    100% {
+        background-position: 0 50%;
+        transform: translateY(0);
+        box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08); 
+    }
+  }
+
+@keyframes shimmer {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.primary-btn.loading {
+    pointer-events: none;
+    background: linear-gradient(90deg,#FFCC80 25%, #ffe4bc 37%,#FFCC80 63%);
+    background-size: 400% 100%;
+    animation: loading 1.3s ease infinite;
+    background-color: #FFCC80;
+}
+
+.skeleton-header, .skeleton-p {
+    background: linear-gradient(90deg,#d3dfdc 25%, #edf2f1 37%,#d3dfdc 63%);
+    background-size: 400% 100%;
+    animation: shimmer 1.3s ease infinite;
+    width: 120px;
+    height: 20px;
+    margin: 5px 0;
+    border-radius: 3px;
+}
+
+.skeleton-p {
+    width: 100%;
+}
+
+.skeleton-header:not(:first-child) {
+    margin-top: 30px;
 }

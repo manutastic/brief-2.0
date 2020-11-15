@@ -1,9 +1,12 @@
-var nameWordBank = require("./data/name_word_bank.json");
-var nounArray = require("./data/nouns.json");
-var companyDescBank = require("./data/companydesc.json");
-var jobDescBank = require("./data/jobdesc.json");
+const nameWordBank = require("./data/name_word_bank.json");
+const nounArray = require("./data/nouns.json");
+const companyDescBank = require("./data/companydesc.json");
+const jobDescBank = require("./data/jobdesc.json");
+const optionsData = require("./data/options.json");
 
-
+var getOptions = function() {
+    return optionsData;
+}
 
 var getName = function(industry) {
     if (industry == 'randomindustry') {
@@ -74,6 +77,7 @@ var getRandomKey = function(obj) {
 }
 
 // module.exports = getBrief;
+module.exports.getOptions = getOptions;
 module.exports.companyName = getName;
 module.exports.companyDesc = getDesc;
 module.exports.jobDesc = getJob;

@@ -1,0 +1,70 @@
+{
+    "jobs": {
+      "logo": {
+          "name": "Logo",
+          "icon": "fas fa-shapes"
+      },
+      "brandid": {
+          "name": "Brand Identity",
+          "icon": "fas fa-user-circle"
+      },
+      "illus": {
+          "name": "Illustration",
+          "icon": "fas fa-paint-brush"
+      },
+      "packaging": {
+          "name": "Packaging",
+          "icon": "fas fa-box"
+      },
+      "billboard": {
+          "name": "Billboard",
+          "icon": "fas fa-audio-description"
+      },
+      "website": {
+          "name": "Website",
+          "icon": "fas fa-desktop"
+      }
+    },
+    "industries": {
+      "tech": {
+          "name": "Technology",
+          "icon": "fas fa-code"
+      },
+      "food": {
+          "name": "Food",
+          "icon": "fas fa-apple-alt"
+      },
+      "store": {
+          "name": "Retail Store",
+          "icon": "fas fa-store-alt"
+      },
+      "ent": {
+          "name": "Entertainment",
+          "icon": "fas fa-play-circle"
+      },
+      "fashion": {
+          "name": "Fashion",
+          "icon": "fas fa-tshirt"
+      },
+      "sports": {
+          "name": "Sports",
+          "icon": "fas fa-futbol"
+      },
+      "edu": {
+          "name": "Education",
+          "icon": "fas fa-graduation-cap"
+      },
+      "transp": {
+          "name": "Transportation",
+          "icon": "fas fa-car"
+      },
+      "realestate": {
+          "name": "Real Estate",
+          "icon": "fas fa-home"
+      },
+      "travel": {
+          "name": "Travel",
+          "icon": "fas fa-plane"
+      }
+    }
+  }
