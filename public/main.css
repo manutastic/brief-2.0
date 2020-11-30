@@ -330,6 +330,9 @@ section label > input + i {
 }
 
 .card .primary-btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     background: #FFCC80;
     cursor: pointer;
     font-weight: 700;
