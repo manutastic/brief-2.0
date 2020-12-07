@@ -45,12 +45,12 @@ document.addEventListener('DOMContentLoaded',function() {
 },false);
 
 function getOptions() {
-    var UserOptions = [];
-    options = document.querySelectorAll('.options input[type="radio"]');
+    const UserOptions = [];
+    const options = document.querySelectorAll('.options input[type="radio"]');
     if (document.querySelectorAll('.options input[type="radio"]:checked').length > 0) {
     	for(var i=0; i<options.length; i++){
 			if(options[i].checked){
-				choice = options[i].value;
+				const choice = options[i].value;
                 UserOptions.push(choice);
 			}
         }

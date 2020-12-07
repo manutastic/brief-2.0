@@ -39,5 +39,6 @@ app.post("/brief", function(req, res) {
 })
 
 app.listen(port, function() {
-    console.log("Brief server running...")
+    console.log(`${String.fromCodePoint(0x2728)}  Goodbrief server is running.`);
+    console.log(`You can view it at http://localhost:${port}`);
 })
