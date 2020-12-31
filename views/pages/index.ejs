@@ -1,6 +1,6 @@
 <% include ../includes/head %>
         <div class="flex flex-col-reverse sm:flex-row">
-                <div class="options bg-teal-500 p-3 pt-8 sm:pt-3 sm:max-w-1/3 sm:mr-0 flex-1 fixed sm:relative z-10 w-full bottom-0">
+                <div class="options bg-teal-500 p-3 pt-9 sm:pt-0 sm:max-w-1/3 sm:mr-0 flex-1 fixed sm:relative z-10 w-full bottom-0">
                     <div class="sm:hidden absolute w-full h-16 -top-16 left-0 bg-gradient-to-t from-white to-white-trn"></div>
                     <span class="inline sm:hidden absolute top-0 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
                         <% include ../components/generateBtn %>
@@ -11,7 +11,7 @@
                             <p class="ml-auto mr-1 text-teal-900 font-bold" id="job-value"></p>
                             <i class="fas fa-chevron-down text-teal-900"></i>
                         </div>
-                        <section class="collapsed max-h-40 transition-max-h duration-300 overflow-y-auto">
+                        <section class="collapsed max-h-40 sm:max-h-96 transition-max-h duration-300 overflow-y-auto">
                             <fieldset>
                                 <% Object.keys(options.jobs).forEach(function (key) { %>
                                     <div class="flex items-center bg-white bg-opacity-80 hover:bg-opacity-90 transition-color">
@@ -43,7 +43,7 @@
                             <p class="ml-auto mr-1 text-teal-900 font-bold" id="industry-value"></p>
                             <i class="fas fa-chevron-down text-teal-900"></i>
                         </div>
-                        <section class="collapsed max-h-40 transition-max-h duration-300 overflow-y-auto">
+                        <section class="collapsed max-h-40 sm:max-h-96 transition-max-h duration-300 overflow-y-auto">
                             <fieldset>
                                 <% Object.keys(options.industries).forEach(function (key) { %>
                                     <div class="flex items-center bg-white bg-opacity-80 hover:bg-opacity-90 transition-color">
@@ -69,9 +69,9 @@
                                 </fieldset>
                             </section>
                         </div>
-                        <p class="text-white">Made by <a href="https://manuodelrio.com/" class="font-bold underline">Manu</a></p>
+                        <p class="text-white text-center sm:text-left mb-4">Made by <a href="https://manuodelrio.com/" class="font-bold underline">Manu</a></p>
                     </div>
-            <div class="brief loading relative bg-white sm:rounded p-4 mb-10 w-full sm:max-w-2/3 flex-1 self-start">
+            <div class="brief loading relative bg-white sm:rounded p-4 min-h-screen sm:min-h-0 w-full sm:max-w-2/3 flex-1 self-start">
                 <h2 class="font-mono font-bold text-sm text-teal-900 opacity-50 tracking-wider uppercase">Design Brief</h2>
                 <div class="skeleton">
                     <div class="skeleton-header"></div>
@@ -84,7 +84,7 @@
                     <div class="skeleton-p "></div>
                     <div class="skeleton-header"></div>
                 </div>
-                <div class="content text-teal-900 min-h-full pb-40 sm:p-0">
+                <div class="content text-teal-900 min-h-full pb-48 sm:p-0">
                     <h3 class="font-bold mt-4" id="name-label">Company Name: </h3>
                     <p id="brief-name"></p>
                     <h3 class="font-bold mt-4">Company Description: </h3>
@@ -94,7 +94,7 @@
                     <h3 class="font-bold mt-4">Deadline: </h3>
                     <p id="brief-deadline"></p>
                 </div>
-                <span class="hidden sm:inline-block relative left-1/2 transform -translate-x-1/2 translate-y-3/4 hover:translate-y-2/3">
+                <span class="hidden sm:inline-block relative left-1/2 transition-all transform -translate-x-1/2 translate-y-3/4 hover:translate-y-2/3">
                     <% include ../components/generateBtn %>
                 </span>
             </div>

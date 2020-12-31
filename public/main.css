@@ -30,13 +30,17 @@
     color: white;
 }
 
-.collapsed {
+.collapsed.collapsed {
     max-height: 0px;
     pointer-events: none;
 }
 
 .selected {
     background-color: white;
+}
+
+.brief {
+    min-height: calc(100vh - 15em);
 }
 
 header h1 a {
