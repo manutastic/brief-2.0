@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'white-trn': "hsla(0, 0%, 100%, 0%)",
         teal: {
           200: '#D9F5F1',
           500: '#00BFA5',
