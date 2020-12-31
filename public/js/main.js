@@ -118,3 +118,13 @@ function generateBrief() {
             renderBrief(data);
         });
 }
+
+function changeTheme() {
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        localStorage.theme = 'light';
+        document.querySelector('html').classList.remove('dark')
+    } else {
+        localStorage.theme = 'dark';
+        document.querySelector('html').classList.add('dark')
+    }
+}

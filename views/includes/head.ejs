@@ -37,9 +37,18 @@
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="/main.min.css" />
+
+    <!-- Dark Mode -->
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.querySelector('html').classList.add('dark');
+        } else {
+            document.querySelector('html').classList.remove('dark');
+        }
+    </script>
 </head>
 
-<body class="bg-teal-500 min-h-screen overflow-auto">
+<body class="bg-teal-500 dark:bg-black min-h-screen overflow-auto transition-colors duration-1000">
         <div class="relative max-w-3xl mx-auto pb-12 sm:px-3 overflow-y-hidden ">
             <header class="flex items-baseline m-4 sm:my-6 sm:mx-0">
                 <h1 class="inline-block text-white text-3xl pr-3">
@@ -48,7 +57,11 @@
                 <p class="sm:inline-block text-white hidden">
                     A random generator for design briefs.
                 </p>
-                <nav class="inline-block ml-auto text-white">
+                <nav class="flex ml-auto text-white">
                     <p><a href="/about">About</a></p>
+                    <button class="leading-0 ml-4" type="button" onclick="changeTheme()">
+                        <ion-icon name="moon" size="small" class="dark:hidden"></ion-icon>
+                        <ion-icon name="sunny" size="small" class="hidden dark:inline-block"></ion-icon>
+                    </button>
                 </nav>
             </header>

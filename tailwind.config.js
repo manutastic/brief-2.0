@@ -3,11 +3,13 @@ module.exports = {
     enabled: true,
     content: ['./views/**/*.ejs', './public/js/main.js'],
   },
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
         'white-trn': "hsla(0, 0%, 100%, 0%)",
+        'dark-teal-trn': "hsla(172, 88%, 7%, 0%)",
+        'dark-teal': "#02201c",
         teal: {
           200: '#D9F5F1',
           500: '#00BFA5',
@@ -30,11 +32,18 @@ module.exports = {
       },
       transitionProperty: {
         'max-h': 'max-height',
+      },
+      lineHeight: {
+        0: '0',
       }
     }
   },
   variants: {
-    extend: {},
+    extend: {
+      display: ['dark'],
+      backgroundOpacity: ['dark'],
+      opacity: ['dark']
+    },
   },
   plugins: [],
 }

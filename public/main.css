@@ -39,6 +39,18 @@
     background-color: white;
 }
 
+.dark .selected {
+    @apply bg-teal-500;
+}
+
+.dark .selected:hover {
+    @apply bg-opacity-100;
+}
+
+.dark .selected i.fas {
+    @apply text-white;
+}
+
 .brief {
     min-height: calc(100vh - 15em);
 }
