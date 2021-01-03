@@ -2,69 +2,77 @@
     "jobs": {
       "logo": {
           "name": "Logo",
-          "icon": "fas fa-shapes"
+          "icon": "shapes"
       },
       "brandid": {
           "name": "Brand Identity",
-          "icon": "fas fa-user-circle"
+          "icon": "person-circle"
       },
       "illus": {
           "name": "Illustration",
-          "icon": "fas fa-paint-brush"
+          "icon": "brush"
       },
       "packaging": {
           "name": "Packaging",
-          "icon": "fas fa-box"
+          "icon": "gift"
       },
       "billboard": {
           "name": "Billboard",
-          "icon": "fas fa-audio-description"
+          "icon": "trail-sign"
       },
       "website": {
           "name": "Website",
-          "icon": "fas fa-desktop"
+          "icon": "desktop"
+      },
+      "randomjob": {
+          "name": "Random",
+          "icon": "dice"
       }
     },
     "industries": {
       "tech": {
           "name": "Technology",
-          "icon": "fas fa-code"
+          "icon": "code-slash"
       },
       "food": {
           "name": "Food",
-          "icon": "fas fa-apple-alt"
+          "icon": "fast-food"
       },
       "store": {
           "name": "Retail Store",
-          "icon": "fas fa-store-alt"
+          "icon": "storefront"
       },
       "ent": {
           "name": "Entertainment",
-          "icon": "fas fa-play-circle"
+          "icon": "game-controller"
       },
       "fashion": {
           "name": "Fashion",
-          "icon": "fas fa-tshirt"
+          "icon": "shirt"
       },
       "sports": {
           "name": "Sports",
-          "icon": "fas fa-futbol"
+          "icon": "football"
       },
       "edu": {
           "name": "Education",
-          "icon": "fas fa-graduation-cap"
+          "icon": "school"
       },
       "transp": {
           "name": "Transportation",
-          "icon": "fas fa-car"
+          "icon": "car"
       },
       "realestate": {
           "name": "Real Estate",
-          "icon": "fas fa-home"
+          "icon": "home"
       },
       "travel": {
           "name": "Travel",
-          "icon": "fas fa-plane"
+          "icon": "airplane"
+      },
+      "random": {
+          "name": "Random",
+          "icon": "dice"
       }
     }
   }

@@ -47,7 +47,7 @@
     @apply bg-opacity-100;
 }
 
-.dark .selected i.fas {
+.dark .selected ion-icon {
     @apply text-white;
 }
 
