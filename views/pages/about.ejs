@@ -1,29 +1,76 @@
 <% include ../includes/head %>
 
-<section class="about card">
-    <h2>About goodbrief</h2>
-    <p>I went to an art and design school. There, I saw that the design students were always looking for 
-        ways to add to their portfolio, but that it was hard to get professional work without already 
-        having experience.</p>
-    <p>That’s why I made <strong>goodbrief</strong>. It generates random design briefs—the document with 
-        all the specifications for the design that a hypothetical client would give you. You can choose 
-        from many different types of design work and industries so that you always have fresh briefs 
-        to practice on.</p>
-    <h3>Version 1.0</h3>
-    <p>I made the initial version (called /Brief) in 2016 and I was surprised at how well it was received! It's been 
-        used all around the world, and I love getting emails from people telling me how they've found 
-        the site useful. It's even been used in some schools to teach design, and featured on websites 
-        like <a href="http://www.ucreative.com/articles/designer-creates-website-for-randomly-generated-design-briefs/">
-        UCreative.</a> I love the designs I've seen people make based on my sites brief, and in 2018 I 
-        decided to redesign the website from the ground up. The original version is still available 
-        <a href="/v1">here</a>.</p>
-    <h3>Version 2.0</h3>
-    <p>While the original site was just built with client-side Javascript and jQuery, I decided to use 
-        Node.js and Express.js for the redesign. This will allow me to lay the foundation for other 
-        features that I have planned down the road. For now, this update adds several new job types and 
-        industries, as well as a better sentence generation system and a refreshed design. If you have 
-        any suggestions for future updates, feel free to <a href="https://manuodelrio.com#contact">contact me.</a>
-    </p>
-</section>
+<div class="flex flex-col sm:flex-row mx-4 sm:mx-0">
+    <div class="mr-8 min-w-1/3 sm:self-center my-8 text-center sm:text-left">
+        <h2 class="text-white text-2xl font-bold">Build your portfolio.<br>Grow your skills.</h2>
+        <p class="text-white">Get unique and customizable design briefs.</p>
+    </div>
+    <div class="relative w-full shadow-lg">
+        <div class="block w-full h-0 pb-16/9"></div>
+        <iframe
+            class="absolute top-0 left-0 w-full h-full rounded"
+            width="560" height="315" 
+            src="https://www.youtube.com/embed/v6P7V78DUec" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
+<div class="bg-white dark:bg-teal-900 m-8 px-4 py-8 rounded text-teal-900 dark:bg-opacity-50 dark:text-white transition-colors duration-1000">
+    <h2 class="text-2xl font-bold text-center">Some cool things people have made using goodbrief</h2>
+    <p class="text-lg text-center">I would love to see what you make! Shoot me a message on <a class="underline" href="https://twitter.com/manutastic">Twitter</a></p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4 -ml-8 -mr-8">
+        <%- include('../components/exampleCard', 
+        {
+            exampleLink: 'https://www.behance.net/dupastana/',
+            exampleImg: '/assets/examples/pastana.jpg',
+            exampleName: 'Eduardo Pastana'
+        }); %>
+        <%- include('../components/exampleCard', 
+        {
+            exampleLink: 'http://kylesbagels.com/',
+            exampleImg: '/assets/examples/bagles.jpg',
+            exampleName: "Kyle's Bagles"
+        }); %>
+        <%- include('../components/exampleCard', 
+        {
+            exampleLink: 'http://newnamdesign.com/index.php/portfolio/weekly-design-sprints/',
+            exampleImg: '/assets/examples/newnam01.jpg',
+            exampleName: 'Cooper Newnam'
+        }); %>
+        <%- include('../components/exampleCard', 
+        {
+            exampleLink: 'https://www.instagram.com/serifandhue/',
+            exampleImg: '/assets/examples/jackson.jpg',
+            exampleName: 'Catherine Jackson'
+        }); %>
+        <!-- <%- include('../components/exampleCard', 
+        {
+            exampleLink: 'http://newnamdesign.com/index.php/portfolio/weekly-design-sprints/',
+            exampleImg: '/assets/examples/newnam02.png',
+            exampleName: 'Cooper Newnam'
+        }); %> -->
+        <!-- <%- include('../components/exampleCard', 
+        {
+            exampleLink: 'https://dribbble.com/mohitb29',
+            exampleImg: '/assets/examples/bairwa.png',
+            exampleName: 'Mohit Bairwa'
+        }); %> -->
+        <%- include('../components/exampleCard', 
+        {
+            exampleLink: 'https://www.instagram.com/reeceelder/',
+            exampleImg: '/assets/examples/reece_elder.jpg',
+            exampleName: 'Reece Elder'
+        }); %>
+        <%- include('../components/exampleCard', 
+        {
+            exampleLink: 'https://dribbble.com/joedoesdesign',
+            exampleImg: '/assets/examples/joe.jpg',
+            exampleName: 'Joe'
+        }); %>
+    </div>
+</div>
+<p class="text-white text-center mb-4">Made by <a href="https://manuodelrio.com/" class="font-bold underline">Manu</a></p>
 
 <% include ../includes/footer %>
