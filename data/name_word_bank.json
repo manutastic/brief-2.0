@@ -215,7 +215,12 @@
       "Corduroy",
       "Denim",
       "Gingham",
-      "Velvet"
+      "Velvet",
+      "Mode",
+      "Model",
+      "Look",
+      "Wear",
+      "Runway"
     ],
     "suffixes": ["Fashion", "Label", "Designs", "Apparel"]
   },
@@ -226,7 +231,8 @@
       "Athletic",
       "Competetive",
       "Extreme",
-      "Strong"
+      "Strong",
+      "Outdoor"
     ],
     "nouns": [
       "Sports",
@@ -238,7 +244,8 @@
       "Gold Medal",
       "Club",
       "Play",
-      "Training"
+      "Training",
+      ""
     ],
     "suffixes": []
   },
@@ -284,9 +291,19 @@
     "suffixes": []
   },
   "transp": {
-    "adjectives": [],
-    "nouns": [],
-    "suffixes": []
+    "adjectives": ["Fast", "Ergonomic"],
+    "nouns": [
+      "Engine",
+      "Acceleration",
+      "Passanger",
+      "Throttle",
+      "Speed",
+      "Zoom",
+      "Horsepower",
+      "Boost",
+      ""
+    ],
+    "suffixes": ["Motors"]
   },
   "realestate": {
     "adjectives": [],
