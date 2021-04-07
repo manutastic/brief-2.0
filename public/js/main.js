@@ -151,7 +151,7 @@ function exportBrief() {
                 const url = URL.createObjectURL(blob);
                 const anchor = document.createElement('a');
                 anchor.href = url;
-                anchor.download = 'brief';
+                anchor.download = 'goodbrief';
                 const clickHandler = function() {
                     setTimeout(() => {
                         URL.revokeObjectURL(url);

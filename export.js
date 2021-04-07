@@ -1,27 +1,32 @@
-const puppeteer = require('puppeteer')
-const embeddedFonts  = require("./embeddedFonts.js")
+const puppeteer = require('puppeteer');
+const embeddedFonts  = require("./embeddedFonts.js");
 
 exports.getPdf = async function (options) {
   const { html } = options
-
-  const browser = await puppeteer.launch({args: ['--no-sandbox']});
-  const page = await browser.newPage();
-  await page.setContent(html, {waitUntil: 'networkidle0'});
-  await page.evaluateHandle('document.fonts.ready');
-
-  const buffer = await page.pdf({
-    printBackground: true,
-    margin: {
-        left: '0px',
-        top: '0px',
-        right: '0px',
-        bottom: '0px'
-    }
-})
-
-  await browser.close();
-
+  let buffer;
+  let browser;
+  try {
+    browser = await puppeteer.launch({args: ['--no-sandbox']});
+    const page = await browser.newPage();
+    await page.setContent(html, {waitUntil: 'networkidle0'});
+    await page.evaluateHandle('document.fonts.ready');
+  
+    buffer = await page.pdf({
+      printBackground: true,
+      margin: {
+          left: '0px',
+          top: '0px',
+          right: '0px',
+          bottom: '0px'
+      }
+  })
+  } catch (e) {
+    console.log(e)
+  } finally {
+    await browser.close();
+  }
   return buffer;
+
 }
 
 exports.getHtml = function (brief) {
@@ -75,8 +80,12 @@ exports.getHtml = function (brief) {
     <h1>good<strong>brief</strong>.io</h1>
     <div class='brief'>
     <p class='mono'>Design Brief</p>
-    <h2>Company Name:</h2>
-    <p>${brief.name}</p>
+    ${
+      brief.name ?
+      '<h2>Company Name:</h2><p>${brief.name}</p>'
+      :
+      ''
+    }
     <h2>Company Description:</h2>
     <p>${brief.desc}</p>
     <h2>Job Description</h2>
