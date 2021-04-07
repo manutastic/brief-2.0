@@ -1,7 +1,9 @@
 var express = require("express"),
-    app = express(),
-    bodyParser = require("body-parser"),
-    getBrief = require("./getbrief.js")
+app = express(),
+bodyParser = require("body-parser"),
+getBrief = require("./getbrief.js");
+
+const { getPdf, getHtml } = require('./export.js')
 
 var port = process.env.PORT || 8000;
 
@@ -47,6 +49,14 @@ app.post("/brief", function (req, res) {
     brief.deadline = getBrief.deadline();
 
     res.json(brief);
+})
+
+app.post("/export", async function (req, res) {
+    const html = getHtml(req.body.brief);
+    const buffer = await getPdf({
+        html: html
+    });
+    res.end(buffer)
 })
 
 app.listen(port, function () {
