@@ -82,7 +82,7 @@ exports.getHtml = function (brief) {
     <p class='mono'>Design Brief</p>
     ${
       brief.name ?
-      '<h2>Company Name:</h2><p>${brief.name}</p>'
+      `<h2>Company Name:</h2><p>${brief.name}</p>`
       :
       ''
     }
