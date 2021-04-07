@@ -10,9 +10,11 @@ exports.getPdf = async function (options) {
     const page = await browser.newPage();
     await page.setContent(html, {waitUntil: 'networkidle0'});
     await page.evaluateHandle('document.fonts.ready');
+    const pageHeight = await page.evaluate(_ => {return window.innerHeight});
   
     buffer = await page.pdf({
       printBackground: true,
+      height: pageHeight,
       margin: {
           left: '0px',
           top: '0px',
