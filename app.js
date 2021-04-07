@@ -3,7 +3,7 @@ app = express(),
 bodyParser = require("body-parser"),
 getBrief = require("./getbrief.js");
 
-const { getPdf, getHtml } = require('./export.js')
+const { getPdf, getImg, getHtml } = require('./export.js')
 
 var port = process.env.PORT || 8000;
 
@@ -52,11 +52,19 @@ app.post("/brief", function (req, res) {
 })
 
 app.post("/export", async function (req, res) {
+    const format = req.body.format;
     const html = getHtml(req.body.brief);
-    const buffer = await getPdf({
-        html: html
-    });
-    res.end(buffer)
+    if (format === 'img') {
+        const buffer = await getImg({
+            html: html
+        });
+        res.end(buffer)
+    } else if (format === 'pdf') {
+        const buffer = await getPdf({
+            html: html
+        });
+        res.end(buffer)
+    }
 })
 
 app.listen(port, function () {

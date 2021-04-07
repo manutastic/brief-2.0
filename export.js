@@ -10,11 +10,18 @@ exports.getPdf = async function (options) {
     const page = await browser.newPage();
     await page.setContent(html, {waitUntil: 'networkidle0'});
     await page.evaluateHandle('document.fonts.ready');
-    const pageHeight = await page.evaluate(_ => {return window.innerHeight});
-  
+
+    const bodyHeight = await page.evaluate(_ => {return document.querySelector('body').offsetHeight});
+    const bodyWidth = await page.evaluate(_ => {return document.querySelector('body').offsetWidth});
+    
+    page.setViewport({width: bodyWidth, height: bodyHeight});
+    
+    const pageHeight = await page.evaluate(_ => {return document.querySelector('html').clientHeight});
+
     buffer = await page.pdf({
       printBackground: true,
       height: pageHeight,
+      pageRanges: '1',
       margin: {
           left: '0px',
           top: '0px',
@@ -22,6 +29,31 @@ exports.getPdf = async function (options) {
           bottom: '0px'
       }
   })
+  } catch (e) {
+    console.log(e)
+  } finally {
+    await browser.close();
+  }
+  return buffer;
+
+}
+
+exports.getImg = async function (options) {
+  const { html } = options
+  let buffer;
+  let browser;
+  try {
+    browser = await puppeteer.launch({args: ['--no-sandbox']});
+    const page = await browser.newPage();
+    await page.setContent(html, {waitUntil: 'networkidle0'});
+    await page.evaluateHandle('document.fonts.ready');  
+
+    const bodyHeight = await page.evaluate(_ => {return document.querySelector('body').offsetHeight});
+    const bodyWidth = await page.evaluate(_ => {return document.querySelector('body').offsetWidth});
+    
+    page.setViewport({width: bodyWidth, height: bodyHeight});
+    
+    buffer = await page.screenshot()
   } catch (e) {
     console.log(e)
   } finally {
@@ -39,10 +71,19 @@ exports.getHtml = function (brief) {
     ${embeddedFonts}
     * {
       font-family: 'Nunito Sans', Roboto, 'Open Sans', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      box-sizing: border-box;
+    }
+    html {
+      padding: 0;
+      margin: 0;
     }
     body {
-      margin: 20px 60px;
+      padding: 60px;
+      padding-top: 20px;
       background: #00BFA5;
+      min-height: 0;
+      height: min-content;
+      margin: 0;
     }
     h1 {
       color: white;
