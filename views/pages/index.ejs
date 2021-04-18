@@ -56,7 +56,27 @@
                         </div>
                     </div>
             <div class="brief loading relative bg-white dark:bg-teal-900 dark:bg-opacity-50 sm:rounded p-4 min-h-screen sm:min-h-0 w-full sm:max-w-2/3 flex-1 self-start transition-colors duration-1000">
-                <h2 class="font-mono font-bold text-sm text-teal-900 dark:text-white opacity-50 tracking-wider uppercase transition-colors duration-1000">Design Brief</h2>
+                <div class="flex justify-between items-center font-mono font-bold text-sm">
+                    <h2 class="font-mono text-teal-900 dark:text-white opacity-50 tracking-wider uppercase transition-colors duration-1000">Design Brief</h2>
+                    <div class="flex bg-gray-200 dark:bg-teal-900 rounded-full px-2 py-1 font-normal text-gray-800 dark:text-teal-500 transition-colors duration-1000">
+                        <button class="export flex hover:underline" onclick="showExportOptions()">
+                            <ion-icon class="mr-1 text-base" name="download-outline"></ion-icon>
+                            Export
+                        </button>
+                        <button class="export-pdf flex items-center mr-3 hover:underline hidden" onclick="exportBrief('pdf')">
+                            <ion-icon class="mr-1 text-base" name="document-text-outline"></ion-icon>
+                            Export PDF
+                        </button>
+                        <button class="export-img flex items-center hover:underline hidden" onclick="exportBrief('img')">
+                            <ion-icon class="mr-1 text-base" name="image-outline"></ion-icon>
+                            Export Image
+                        </button>
+                        <span class="export-loading flex items-center hidden">
+                            <ion-icon class="animate-spin mr-2 text-base" name="sync-outline"></ion-icon>
+                            Exporting...
+                        </span>
+                    </div>
+                </div>
                 <div class="skeleton">
                     <div class="skeleton-header"></div>
                     <div class="skeleton-p "></div>

@@ -1,3 +1,5 @@
+const brief = {};
+
 function toggleClass(element, toggleClass) {
     var currentClass = element.className;
     var newClass;
@@ -115,6 +117,7 @@ function generateBrief() {
     }).then(response => response.json())
         .then(data => {
             setLoading(false);
+            window.brief = data;
             renderBrief(data);
         });
 }
@@ -127,4 +130,47 @@ function changeTheme() {
         localStorage.theme = 'dark';
         document.querySelector('html').classList.add('dark')
     }
+}
+
+function showExportOptions() {
+    // Not a toggle, we only do this once
+    document.querySelector('.export').classList.add('hidden');
+    document.querySelector('.export-img').classList.remove('hidden');
+    document.querySelector('.export-pdf').classList.remove('hidden');
+}
+
+function exportBrief(format) {
+    document.querySelector('.export-img').classList.add('hidden');
+    document.querySelector('.export-pdf').classList.add('hidden');
+    document.querySelector('.export-loading').classList.remove('hidden');
+    fetch('/export', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({brief: window.brief, format})
+    }).then(response => {
+        return response.arrayBuffer()
+            .then(res => {
+                document.querySelector('.export-img').classList.remove('hidden');
+                document.querySelector('.export-pdf').classList.remove('hidden');
+                document.querySelector('.export-loading').classList.add('hidden');
+                const mimeType = format === 'pdf' ? 'application/pdf' : 'image/png'
+                const blob = new Blob([res], { type: mimeType });
+                const url = URL.createObjectURL(blob);
+                const anchor = document.createElement('a');
+                anchor.href = url;
+                anchor.download = 'goodbrief';
+                const clickHandler = function() {
+                    setTimeout(() => {
+                        URL.revokeObjectURL(url);
+                        this.removeEventListener('click', clickHandler);
+                        this.remove;
+                    }, 500)
+                }
+                anchor.addEventListener('click', clickHandler, false);
+                anchor.click()
+            })
+    })
 }

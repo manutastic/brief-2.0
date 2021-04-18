@@ -51,6 +51,9 @@ module.exports = {
       padding: {
         '16/9': '56.25%'
       },
+      fontFamily: {
+        'mono': '"Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+      }
     }
   },
   variants: {
