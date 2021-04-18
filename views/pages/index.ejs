@@ -15,10 +15,10 @@
                         <section class="collapsed max-h-40 sm:max-h-96 transition-max-h duration-300 overflow-y-auto">
                             <fieldset>
                                 <% Object.keys(options.jobs).forEach(function (key) { %>
-                                    <div class="flex items-center bg-white dark:bg-teal-900 bg-opacity-0 dark:bg-opacity-0 hover:bg-opacity-60 dark:hover:bg-opacity-60 transition-color duration-200">
+                                    <div class="flex items-center bg-teal-200 dark:bg-teal-900 hover:bg-teal-100 dark:hover:bg-teal-800 transition-color duration-200">
                                         <input class="invisible absolute" type="radio" name="job" value="<%=key%>" id="<%=key%>">
-                                        <label class="flex p-5 w-full cursor-pointer" for="<%=key%>">
-                                            <ion-icon name="<%=options.jobs[key].icon%>" size="small" class="text-teal-600 mr-2"></ion-icon>
+                                        <label class="flex p-3 w-full cursor-pointer items-center" for="<%=key%>">
+                                            <ion-icon name="<%=options.jobs[key].icon%>" size="small" class="text-teal-500 bg-teal-300 dark:bg-teal-700 rounded-xl p-2 mr-2"></ion-icon>
                                             <p class="font-mono font-bold text-sm tracking-wider uppercase text-teal-900 dark:text-white">
                                                 <%=options.jobs[key].name%>
                                             </p>
@@ -37,10 +37,10 @@
                         <section class="collapsed max-h-40 sm:max-h-96 transition-max-h duration-300 overflow-y-auto">
                             <fieldset>
                                 <% Object.keys(options.industries).forEach(function (key) { %>
-                                    <div class="flex items-center bg-white dark:bg-teal-900 bg-opacity-0 dark:bg-opacity-0 hover:bg-opacity-60 dark:hover:bg-opacity-60 transition-color duration-200">
+                                    <div class="flex items-center bg-teal-200 dark:bg-teal-900 hover:bg-teal-100 dark:hover:bg-teal-800 transition-color duration-200">
                                         <input class="invisible absolute" type="radio" name="industry" value="<%=key%>" id="<%=key%>">
-                                        <label class="flex p-5 w-full cursor-pointer" for="<%=key%>">
-                                            <ion-icon name="<%=options.industries[key].icon%>" size="small" class="text-teal-600 mr-2"></ion-icon>
+                                        <label class="flex p-3 w-full cursor-pointer items-center" for="<%=key%>">
+                                            <ion-icon name="<%=options.industries[key].icon%>" size="small" class="text-teal-500 bg-teal-300 dark:bg-teal-700 rounded-xl p-2 mr-2"></ion-icon>
                                             <p class="font-mono font-bold text-sm tracking-wider uppercase text-teal-900 dark:text-white">
                                                 <%=options.industries[key].name%>
                                             </p>
@@ -50,7 +50,10 @@
                                 </fieldset>
                             </section>
                         </div>
-                        <p class="text-white text-center sm:text-left mb-4">Made by <a href="https://manuodelrio.com/" class="font-bold underline">Manu</a></p>
+                        <div class="mt-8 sm:mt-4 mb-6 flex justify-between sm:flex-col">
+                            <p class="text-white">Made by <a href="https://manuodelrio.com/" class="font-bold underline">Manu</a></p>
+                            <p class="text-teal-200"><a href="mailto:hello@goodbrief.io">Feedback?</a></p>
+                        </div>
                     </div>
             <div class="brief loading relative bg-white dark:bg-teal-900 dark:bg-opacity-50 sm:rounded p-4 min-h-screen sm:min-h-0 w-full sm:max-w-2/3 flex-1 self-start transition-colors duration-1000">
                 <h2 class="font-mono font-bold text-sm text-teal-900 dark:text-white opacity-50 tracking-wider uppercase transition-colors duration-1000">Design Brief</h2>

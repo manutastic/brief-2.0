@@ -39,16 +39,20 @@
     background-color: white;
 }
 
+.selected ion-icon {
+    @apply bg-teal-500 text-teal-200;
+}
+
 .dark .selected {
     @apply bg-teal-500;
 }
 
 .dark .selected:hover {
-    @apply bg-opacity-100;
+    @apply bg-teal-600;
 }
 
 .dark .selected ion-icon {
-    @apply text-white;
+    @apply bg-teal-400 text-teal-600;
 }
 
 .brief {
