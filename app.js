@@ -52,9 +52,13 @@ app.post("/brief", function (req, res) {
     brief.job = getBrief.jobDesc(job);
     brief.deadline = getBrief.deadline();
 
-    db.logEvent('briefGeneration', 'briefsGenerated');
-    db.logEvent('jobType', job);
-    db.logEvent('industry', industry);
+    try {
+        db.logEvent('briefGeneration', 'briefsGenerated');
+        db.logEvent('jobType', job);
+        db.logEvent('industry', industry);
+    } catch (e) {
+        console.error(`Error logging events: ${e}`);
+    }
 
     res.json(brief);
 })
@@ -63,13 +67,21 @@ app.post("/export", async function (req, res) {
     const format = req.body.format;
     const html = getHtml(req.body.brief);
     if (format === 'img') {
-        db.logEvent('exportType', 'img');
+        try {
+            db.logEvent('exportType', 'img');
+        } catch (e) {
+            console.error(`Error logging events: ${e}`);
+        }
         const buffer = await getImg({
             html: html
         });
         res.end(buffer)
     } else if (format === 'pdf') {
-        db.logEvent('exportType', 'pdf');
+        try {
+            db.logEvent('exportType', 'pdf');
+        } catch (e) {
+            console.error(`Error logging events: ${e}`);
+        }
         const buffer = await getPdf({
             html: html
         });

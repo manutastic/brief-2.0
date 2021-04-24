@@ -72,7 +72,6 @@ var getJob = function (job) {
     if (job == 'random') {
         job = getRandomKey(jobDescBank);
     }
-    console.log(job);
     var bank = jobDescBank[job];
     if (!bank.template)
         return bank;
