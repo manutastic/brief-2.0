@@ -9,7 +9,7 @@ var getOptions = function () {
 }
 
 var getName = function (industry) {
-    if (industry == 'randomindustry') {
+    if (industry == 'random') {
         industry = getRandomKey(companyDescBank);
     }
     var genericNouns = require("./data/companyNames/generic-nouns.json");
@@ -50,7 +50,7 @@ var getName = function (industry) {
 }
 
 var getDesc = function (industry) {
-    if (industry == 'randomindustry') {
+    if (industry == 'random') {
         industry = getRandomKey(companyDescBank);
     }
     var bank = companyDescBank[industry];
@@ -69,9 +69,10 @@ var getDesc = function (industry) {
 }
 
 var getJob = function (job) {
-    if (job == 'randomjob') {
+    if (job == 'random') {
         job = getRandomKey(jobDescBank);
     }
+    console.log(job);
     var bank = jobDescBank[job];
     if (!bank.template)
         return bank;
@@ -84,13 +85,20 @@ var getJob = function (job) {
     return job;
 }
 
-var getDeadline = function (industry) {
+var getDeadline = function () {
     var days = Math.round(Math.random() * (10 - 2) + 2); // random number between 2 and 10
     return (days == 7) ? "1 week" : days + " days";
 }
 
 var getRandomKey = function (obj) {
     let allKeys = Object.keys(obj);
+
+    // Remove 'ta' from keys since it is not a valid industry
+    const index = allKeys.indexOf('ta');
+    if (index > -1) {
+        allKeys.splice(index, 1);
+    }
+
     let randomKey = allKeys[Math.floor(Math.random() * allKeys.length)];
     return randomKey;
 }

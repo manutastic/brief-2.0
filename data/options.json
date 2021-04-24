@@ -1,78 +1,78 @@
 {
     "jobs": {
-      "logo": {
-          "name": "Logo",
-          "icon": "shapes"
-      },
-      "brandid": {
-          "name": "Brand Identity",
-          "icon": "person-circle"
-      },
-      "illus": {
-          "name": "Illustration",
-          "icon": "brush"
-      },
-      "packaging": {
-          "name": "Packaging",
-          "icon": "gift"
-      },
-      "billboard": {
-          "name": "Billboard",
-          "icon": "trail-sign"
-      },
-      "website": {
-          "name": "Website",
-          "icon": "desktop"
-      },
-      "randomjob": {
-          "name": "Random",
-          "icon": "dice"
-      }
+        "logo": {
+            "name": "Logo",
+            "icon": "shapes"
+        },
+        "brandid": {
+            "name": "Brand Identity",
+            "icon": "person-circle"
+        },
+        "illus": {
+            "name": "Illustration",
+            "icon": "brush"
+        },
+        "packaging": {
+            "name": "Packaging",
+            "icon": "gift"
+        },
+        "billboard": {
+            "name": "Billboard",
+            "icon": "trail-sign"
+        },
+        "website": {
+            "name": "Website",
+            "icon": "desktop"
+        },
+        "random": {
+            "name": "Random",
+            "icon": "dice"
+        }
     },
     "industries": {
-      "tech": {
-          "name": "Technology",
-          "icon": "code-slash"
-      },
-      "food": {
-          "name": "Food",
-          "icon": "fast-food"
-      },
-      "store": {
-          "name": "Retail Store",
-          "icon": "storefront"
-      },
-      "ent": {
-          "name": "Entertainment",
-          "icon": "game-controller"
-      },
-      "fashion": {
-          "name": "Fashion",
-          "icon": "shirt"
-      },
-      "sports": {
-          "name": "Sports",
-          "icon": "football"
-      },
-      "edu": {
-          "name": "Education",
-          "icon": "school"
-      },
-      "transp": {
-          "name": "Transportation",
-          "icon": "car"
-      },
-      "realestate": {
-          "name": "Real Estate",
-          "icon": "home"
-      },
-      "travel": {
-          "name": "Travel",
-          "icon": "airplane"
-      },
-      "random": {
-          "name": "Random",
-          "icon": "dice"
-      }
+        "tech": {
+            "name": "Technology",
+            "icon": "code-slash"
+        },
+        "food": {
+            "name": "Food",
+            "icon": "fast-food"
+        },
+        "store": {
+            "name": "Retail Store",
+            "icon": "storefront"
+        },
+        "ent": {
+            "name": "Entertainment",
+            "icon": "game-controller"
+        },
+        "fashion": {
+            "name": "Fashion",
+            "icon": "shirt"
+        },
+        "sports": {
+            "name": "Sports",
+            "icon": "football"
+        },
+        "edu": {
+            "name": "Education",
+            "icon": "school"
+        },
+        "transp": {
+            "name": "Transportation",
+            "icon": "car"
+        },
+        "realestate": {
+            "name": "Real Estate",
+            "icon": "home"
+        },
+        "travel": {
+            "name": "Travel",
+            "icon": "airplane"
+        },
+        "random": {
+            "name": "Random",
+            "icon": "dice"
+        }
     }
-  }
+}
