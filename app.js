@@ -1,6 +1,6 @@
 var express = require("express"),
+    compression = require("compression"),
     app = express(),
-    bodyParser = require("body-parser"),
     getBrief = require("./getbrief.js");
 
 const { getPdf, getImg, getHtml } = require('./export.js')
@@ -11,8 +11,9 @@ var port = process.env.PORT || 8000;
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(compression());
 
 const db = new Database;
 
