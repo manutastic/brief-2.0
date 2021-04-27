@@ -72,14 +72,20 @@ function getOptions() {
 }
 
 function setLoading(loading) {
-    const genButton = document.getElementById("gen-btn");
+    const genButtons = document.querySelectorAll('.gen-btn');
     const briefSection = document.querySelector('.brief');
-    genButton.value = loading ? "Generating..." : "Generate";
+    genButtons.forEach((genButton) => {
+        genButton.value = loading ? "Generating..." : "Generate";
+    });
     if (loading) {
-        genButton.classList.add("loading");
+        genButtons.forEach((genButton) => {
+            genButton.classList.add("loading");
+        });
         briefSection.classList.add("loading");
     } else {
-        genButton.classList.remove("loading");
+        genButtons.forEach((genButton) => {
+            genButton.classList.remove("loading");
+        });
         briefSection.classList.remove("loading");
     }
 }
@@ -149,7 +155,7 @@ function exportBrief(format) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({brief: window.brief, format})
+        body: JSON.stringify({ brief: window.brief, format })
     }).then(response => {
         return response.arrayBuffer()
             .then(res => {
@@ -162,7 +168,7 @@ function exportBrief(format) {
                 const anchor = document.createElement('a');
                 anchor.href = url;
                 anchor.download = 'goodbrief';
-                const clickHandler = function() {
+                const clickHandler = function () {
                     setTimeout(() => {
                         URL.revokeObjectURL(url);
                         this.removeEventListener('click', clickHandler);

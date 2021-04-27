@@ -35,7 +35,7 @@ class Database {
         `;
         const client = this.connectToDB();
         client.query(sql, [eventType, eventName], (err, res) => {
-            if (err) throw err;
+            if (err) console.error(err);
             client.end();
         });
     }
