@@ -57,7 +57,8 @@
     <link rel="manifest" href="manifest.json">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" media="screen" href="/main.min.css" />
+    <link rel="preload" href="/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/main.min.css"></noscript>
 
     <!-- Dark Mode -->
     <script>
