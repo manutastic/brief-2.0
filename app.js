@@ -10,10 +10,10 @@ const { Database } = require('./db.js');
 var port = process.env.PORT || 8000;
 
 app.set("view engine", "ejs");
+app.use(compression());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(compression());
 
 const db = new Database;
 
