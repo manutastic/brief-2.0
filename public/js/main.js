@@ -26,6 +26,11 @@ function updateSelections() {
     }
 }
 
+window.onload = function (event) {
+    const body = document.querySelector('body');
+    body.classList.remove('preload');
+};
+
 document.addEventListener('DOMContentLoaded', function () {
     var defaultOptions = ["logo", "tech"];
     var optionElements = document.querySelectorAll('.options input[type="radio"]');

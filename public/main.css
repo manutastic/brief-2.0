@@ -24,6 +24,14 @@
     font-family: 'Nunito Sans', Roboto, 'Open Sans', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+/* Ensure no transitions happen before page loads */
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
 
 *::selection {
     background-color: hsla(172, 100%, 35%, 1);

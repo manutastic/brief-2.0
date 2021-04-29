@@ -6,7 +6,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131354364-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'UA-131354364-1');
     </script>
@@ -31,14 +31,16 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://goodbrief.io/">
     <meta property="og:title" content="GoodBrief: Get Unique Design Briefs">
-    <meta property="og:description" content="Randomly generate design briefs to practice your design skills, get content for your portfolio and gain experience.">
+    <meta property="og:description"
+        content="Randomly generate design briefs to practice your design skills, get content for your portfolio and gain experience.">
     <meta property="og:image" content="https://goodbrief.io/social.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://goodbrief.io/">
     <meta property="twitter:title" content="GoodBrief: Get Unique Design Briefs">
-    <meta property="twitter:description" content="Randomly generate design briefs to practice your design skills, get content for your portfolio and gain experience.">
+    <meta property="twitter:description"
+        content="Randomly generate design briefs to practice your design skills, get content for your portfolio and gain experience.">
     <meta property="twitter:image" content="https://goodbrief.io/social.png">
 
     <!-- Favicons -->
@@ -56,10 +58,6 @@
 
     <link rel="manifest" href="manifest.json">
 
-    <!-- CSS -->
-    <link rel="preload" href="/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/main.min.css"></noscript>
-
     <!-- Dark Mode -->
     <script>
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -68,22 +66,40 @@
             document.querySelector('html').classList.remove('dark');
         }
     </script>
+
+    <style>
+        body {
+            background: #00BFA5;
+            visibility: hidden;
+        }
+
+        .dark body {
+            background: black;
+        }
+    </style>
+
+    <!-- CSS -->
+    <link rel="preload" href="/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/main.min.css">
+    </noscript>
+
 </head>
 
-<body class="bg-teal-500 dark:bg-black min-h-screen overflow-auto transition-colors duration-1000">
-        <div class="relative max-w-3xl mx-auto pb-12 sm:px-3 overflow-y-hidden ">
-            <header class="flex items-baseline m-4 sm:my-6 sm:mx-0">
-                <h1 class="inline-block text-white text-3xl pr-3">
-                    <a href="/">good<span>brief</span></a>
-                </h1>
-                <p class="sm:inline-block text-white hidden">
-                    A random generator for design briefs.
-                </p>
-                <nav class="flex ml-auto text-white">
-                    <p><a href="/about">About</a></p>
-                    <button class="leading-0 ml-4" type="button" onclick="changeTheme()">
-                        <ion-icon name="moon" size="small" class="dark:hidden"></ion-icon>
-                        <ion-icon name="sunny" size="small" class="hidden dark:inline-block"></ion-icon>
-                    </button>
-                </nav>
-            </header>
+<body class="preload bg-teal-500 dark:bg-black min-h-screen overflow-auto transition-colors duration-1000 visible">
+    <div class="relative max-w-3xl mx-auto pb-12 sm:px-3 overflow-y-hidden ">
+        <header class="flex items-baseline m-4 sm:my-6 sm:mx-0">
+            <h1 class="inline-block text-white text-3xl pr-3">
+                <a href="/">good<span>brief</span></a>
+            </h1>
+            <p class="sm:inline-block text-white hidden">
+                A random generator for design briefs.
+            </p>
+            <nav class="flex ml-auto text-white">
+                <p><a href="/about">About</a></p>
+                <button class="leading-0 ml-4" type="button" onclick="changeTheme()">
+                    <ion-icon name="moon" size="small" class="dark:hidden"></ion-icon>
+                    <ion-icon name="sunny" size="small" class="hidden dark:inline-block"></ion-icon>
+                </button>
+            </nav>
+        </header>
