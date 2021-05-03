@@ -354,6 +354,7 @@ section label > input + i {
 
 footer {
     color: hsla(0, 0%, 100%, 80%);
+    font-weight: bold;
     text-align: center;
 }
 footer a {
