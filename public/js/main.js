@@ -74,3 +74,18 @@ function saveOptions() {
 		alert("Select Something");
 	}
 }
+
+function saveAsMD(data) {
+    download('GoodBrief-'+ data.name.replace(/\/\:\*\?\"\<\>\|/g, '-') +'.md', `data:text/plain;charset=utf-8,# Design Brief\n\n\n**Company Name:**\n${data.name}\n\n**Company Description:**\n${data.desc}\n\n**Job Description**\n${data.job}\n\n**Deadline:**\n${data.deadline}\n\nCreated with [GoodBrief](https://GoodBrief.io)`);
+}
+
+function download(title, text) {
+    let a = document.createElement('a');
+    a.hidden = true
+    document.body.appendChild(a);
+    a.download = title;
+    a.href=text;
+    a.click();
+    a.remove();
+    a = null;
+}
