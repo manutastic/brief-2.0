@@ -49,7 +49,11 @@ module.exports = {
         0: '0',
       },
       padding: {
-        '16/9': '56.25%'
+        '16/9': '56.25%',
+        'full': '100%'
+      },
+      zIndex: {
+        '-1': '-1'
       },
       fontFamily: {
         'mono': '"Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'

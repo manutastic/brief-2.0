@@ -81,8 +81,8 @@
             </div>
         </div>
         <div
-            class="brief loading relative bg-white dark:bg-teal-900 dark:bg-opacity-50 sm:rounded p-4 min-h-screen sm:min-h-0 w-full sm:max-w-2/3 flex-1 self-start transition-colors duration-1000">
-            <div class="flex justify-between items-center font-mono font-bold text-sm">
+            class="brief relative bg-white dark:bg-teal-900 dark:bg-opacity-50 sm:rounded p-4 min-h-screen sm:min-h-0 w-full sm:max-w-2/3 flex-1 self-start transition-colors duration-1000">
+            <div id="brief-header" class="hidden flex justify-between items-center font-mono font-bold text-sm">
                 <h2
                     class="font-mono text-teal-900 dark:text-white opacity-50 tracking-wider uppercase transition-colors duration-1000">
                     Design Brief</h2>
@@ -118,7 +118,7 @@
                 <div class="skeleton-p "></div>
                 <div class="skeleton-header"></div>
             </div>
-            <div class="content text-teal-900 dark:text-white min-h-full pb-48 sm:p-0 transition-colors duration-1000">
+            <div id="brief-content" class="content hidden text-teal-900 dark:text-white min-h-full pb-48 sm:p-0 transition-colors duration-1000">
                 <h3 class="font-bold mt-4" id="name-label">Company Name: </h3>
                 <p id="brief-name"></p>
                 <h3 class="font-bold mt-4">Company Description: </h3>
@@ -127,6 +127,16 @@
                 <p id="brief-job"></p>
                 <h3 class="font-bold mt-4">Deadline: </h3>
                 <p id="brief-deadline"></p>
+            </div>
+            <div id="brief-empty" class="text-center dark:text-white text-teal-900 pb-52 sm:p-0">
+                <h2 class="font-bold text-2xl mt-6">Get a Unique Design Brief</h2>
+                <p class="text-lg">Build your portfolio. Grow your skills.</p>
+                <div class="relative inline-block mt-6 mb-4">
+                    <img class="mx-auto relative z-10" src="/assets/empty.svg">
+                    <div class="absolute w-full h-0 -mt-px ml-px top-1/2 left-1/2 dark:bg-teal-700 bg-teal-300 pt-full rounded-full z-0 transform -translate-y-1/2 -translate-x-1/2 scale-125 transition-colors duration-1000"></div>
+                </div>
+                <p class="text-lg">Choose the job type and industry,<br>then just hit "Generate."</p>
+                <ion-icon class="text-2xl mt-4 -mb-6" name="arrow-down-outline"></ion-icon>
             </div>
             <span
                 class="hidden sm:inline-block relative left-1/2 transition-all transform -translate-x-1/2 translate-y-3/4 hover:translate-y-2/3">

@@ -55,9 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
         toggleClass(document.querySelector('.industry section'), "collapsed");
         document.querySelector('.job section').classList.add("collapsed");
     }, false);
-
-    generateBrief();
-
 }, false);
 
 function getOptions() {
@@ -114,8 +111,19 @@ function renderBrief(brief) {
     briefDeadline.innerHTML = brief.deadline;
 }
 
+function hideEmptyState() {
+    const briefHeader = document.getElementById("brief-header");
+    const briefContent = document.getElementById("brief-content");
+    const emptyState = document.getElementById("brief-empty");
+
+    briefHeader.classList.remove('hidden');
+    briefContent.classList.remove('hidden');
+    emptyState.classList.add('hidden');
+}
+
 function generateBrief() {
     setLoading(true);
+    hideEmptyState();
     const selectedOptions = getOptions();
     localStorage["briefoptions"] = JSON.stringify(selectedOptions);
     fetch('/brief', {
